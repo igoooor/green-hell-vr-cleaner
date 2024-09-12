@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Green Hell VR XML Save File Cleaner</title>
+</head>
+<body>
+<h1>Upload Green Hell VR XML Save File</h1>
+<p>This tool will delete all spoiled items in the game.</p>
+<form action="{{ path('file_upload') }}" method="POST" enctype="multipart/form-data">
+    <input type="file" name="xml_file" accept=".xml" required><br><br>
+
+    <label>
+        <input type="checkbox" name="remove_stonehenge_objects" value="1">
+        Additionally remove all objects in "STONEHENGE" area
+    </label><br><br>
+
+    <button type="submit">Upload and Process</button>
+</form>
+</body>
+</html>
